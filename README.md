@@ -1,14 +1,14 @@
 # News Article Classification Model
 
-A machine learning model that classifies news articles into various categories. Uses TF-IDF to vectorize input text and find important words. We remap the words in the articles into features. Features are the superset of words that have importance assigned to them based on the frequency of occurrence in the document and across various documents.
+A machine learning model that classifies news articles into various categories. Uses TF-IDF to vectorise input text and find important words. We remap the words in the articles into features. Features are the superset of words that have importance assigned to them based on the frequency of occurrence in the document and across various documents.
 
 **TF-IDF**
 
-- Transforms the text into a usable vector. Term frequency is the # of occurrences of a specific term in a document, it indicates how important a specific term is in a document.
+- Transforms the text into a usable vector. Term frequency is the # of occurrences of a specific term in a document; it indicates how important a particular word is in a document.
 
-- Document frequency is the # of documents containing a specific term. It indicates how common the term is.
+- Document frequency is the # of documents containing a specific term. It indicates how common the word is.
 
-For each article, we perform a chi-squared analysis to find the relevancy of words to a particular category. In doing so, we find the "key" words that, if occur, determine the category of the entire article.
+For each article, we perform a chi-squared analysis to find the relevancy of words to a particular category. In doing so, we find the "key" words that, if they occur, determine the class of the entire article.
 
 `unigrams` array stores single word features (in increasing order of chi-squared statistical values)
 
@@ -23,7 +23,7 @@ Cross-validation is performed across 5 different models:
 4) Decision Tree Classifier
 5) K-Nearest Neighbours
 
-We select the model which had the best mean cross-validation score, which, in this case, was Logistic Regression.
+We selected the model with the best mean cross-validation score, which, in this case, was ***Logistic Regression***.
 
 
 **Classifiers Tested**
